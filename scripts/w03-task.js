@@ -44,14 +44,14 @@ let divideNumbers = () => {
 document.querySelector("#divideNumbers").addEventListener("click", divideNumbers);
 
 /* Decision Structure */
-const currentDaate = new Date();
+const currentDate = new Date();
 const currentYear = new Date().getFullYear();
 /*I don't know how to do step 3*/
 document.getElementById("year").value = currentYear;
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
-let thisIsAnArray = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13]
+let thisIsAnArray = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13];
 document.getElementById("array").textContent = thisIsAnArray;
 
 /* Output Odds Only Array */
