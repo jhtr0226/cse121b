@@ -39,7 +39,7 @@ firstItem.splice(2, 1); // Removes 1 element from the array starting at index 2
 //used when you want to transform the elements of an array in a specific way without modifying the original array
 const steps = ["one", "two", "three"];
 const stepsHtml = steps.map/*here start a fucntion*/(function (step) /*calls step*/ {
-    return `<li>${step}</li>`; // returs it converted into html
+  return `<li>${step}</li>`; // returs it converted into html
 });
 document.getElementById("myList").innerHTML = stepsHtml.join();//Set the inner HTML of the element with the ID "myList" to the converted HTML list items and adds it to the HTML code
 // .join() works to join all elements of an array into a string and can separate
@@ -56,7 +56,7 @@ const gpa = gpaPoints.reduce((total, item) => total + item) / gpaPoints.length;
 // it filters
 const words = ["watermelon", "peach", "apple", "tomato", "grape"];
 const shortWords = words.filter(function (word) {
-    return word.length < 6;
+  return word.length < 6;
 });
 //same thing with an arrow function
 const shortWords = words.filter((word) /*this is the>*/ =>/*<arrow f():*/ word.length < 6);
@@ -122,13 +122,71 @@ button.......*/
 // Functions:
 // function declaration / definition:
 function fullName(first, last) {
-    return `${first} ${last}`
+  return `${first} ${last}`
 };
 //anonymous function expression:
 const fullName = function (first, last) {
-    return `${first} ${last}`
+  return `${first} ${last}`
 }
 // arrow function expression:
 const fullName = (firstName, lastName) => `${firstName} ${lastName}`;
 //  in existing HTML
 document.querySelector('#fullName').innerHTML = fullName(firstName, lastName);
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+// CALLBACK functions:
+/* powerful feature of JavaScript. 
+They are used extensively in the JavaScript language and in the browser. 
+Callback functions are used to handle events, 
+to process data, and to control the flow of a program*/
+// A callback function is a function passed into another function as an argument (like a  nested one?)
+// which is then invoked inside the outer function to complete some kind of routine or action.
+// There are two ways in which the callback may be called: synchronous and asynchronous
+let value = 1;
+
+doSomething(() => {
+  value = 2;
+});
+
+console.log(value); //I've noticed console.log() is like an output
+
+/*If doSomething calls the callback synchronously, 
+then the last statement would log 2 because value = 2 is 
+synchronously executed; otherwise, if the callback is asynchronous, 
+the last statement would log 1 because value = 2 is only executed 
+after the console.log statement.
+
+Examples of synchronous callbacks include the callbacks passed 
+to Array.prototype.map(), Array.prototype.forEach(), etc. 
+Examples of asynchronous callbacks include the callbacks passed 
+to setTimeout() and Promise.prototype.then()
+*/
+
+// Objeccts
+// This is an object:
+let person = {
+  name: "Antonia Francesca",
+  age: 30,
+  profession: "Software Engineer",
+  hobbies: ["reading", "playing guitar", "hiking"],
+  address: {
+    street: "123 Camino Real",
+    city: "Santa Rosa",
+    country: "Honduras"
+  },
+  isEmployed: true,
+  greet: function () {
+    console.log(`Hello, my name is ${this.name}.`);
+  }
+};
+console.log(person./*changes*/hobbies[0]); // Output: reading
+
+
+
+
+
+
+
+
