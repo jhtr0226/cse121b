@@ -51,7 +51,7 @@ document.getElementById("year").value = currentYear;
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
-let thisIsAnArray = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13];
+let thisIsAnArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 document.getElementById("array").textContent = thisIsAnArray;
 
 /* Output Odds Only Array */
