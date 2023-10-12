@@ -184,6 +184,56 @@ let person = {
 console.log(person./*changes*/hobbies[0]); // Output: reading
 
 
+//////////////////////////////////////////////////////////////
+// Libraries:
+//import leftpad, { first, last } from './utils'
+// if (pastTheFold === true) {
+//import './parallax' // "import' and 'export' may only appear at the top level" }
+//Exporting:
+export const name = "square";
+
+export function draw(ctx, length, x, y, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, length, length);
+
+  return { length, x, y, color };
+}
+// A more convenient way:
+export { name, draw, reportArea, reportPerimeter };
+
+//Importing:
+import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
+
+// Importing modules:
+// in square.js
+export {
+  name as squareName,
+  draw as drawSquare,
+  reportArea as reportSquareArea,
+  reportPerimeter as reportSquarePerimeter,
+};
+// in main.js
+import {
+  squareName,
+  drawSquare,
+  reportSquareArea,
+  reportSquarePerimeter,
+} from "./modules/square.js";
+// Creating a module object
+import * as Module from "./modules/module.js";
+
+// This grabs all the exports available inside module.js, 
+// and makes them available as members of an object Module,
+Module.function1();
+Module.function2();
+
+//And exports:
+export { name, draw, reportArea, reportPerimeter };
+
+
+
+
+//Fetch:
 
 
 
