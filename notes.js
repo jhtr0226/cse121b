@@ -240,3 +240,80 @@ export { name, draw, reportArea, reportPerimeter };
 
 
 
+
+
+
+
+// Loops:
+
+// For loop: repeats until a specified condition evaluates to false
+//for (initialization; condition; afterthought)
+//statement
+function countSelected(selectObject) {
+  let numberSelected = 0;
+  for (let i = 0; i < selectObject.options.length; i++) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+    }
+  }
+  return numberSelected;
+}
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+  const musicTypes = document.selectForm.musicTypes;
+  console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
+});
+
+//do...while: statement repeats until a specified condition evaluates to false.
+//do
+//  statement
+//while (condition);
+let i = 0;
+do {
+  i += 1;
+  console.log(i);
+} while (i < 5); //keeps repeating until it is no longer less than 5
+
+//while: statement executes its statements as long as a specified condition evaluates to true
+while (condition)
+  statement
+
+//Breaks: Use the break statement to terminate a loop, switch, or in conjunction with a labeled statement.
+
+//continue: used to restart a while, do-while, for, or label statement.
+let i = 0;
+let n = 0;
+while (i < 5) {
+  i++;
+  if (i === 3) {
+    continue;
+  }
+  n += i;
+  console.log(n);
+}
+// Logs:
+// 1 3 7 12
+
+// for...in: iterates a specified variable over all the enumerable properties of an object
+for (variable in object)
+  statement
+//The following function takes as its argument an object and the object's name.
+function dumpProps(obj, objName) {
+  let result = "";
+  for (const i in obj) {
+    result += `${objName}.${i} = ${obj[i]}<br>`;
+  }
+  result += "<hr>";
+  return result;
+}
+
+//for...of: The for...of statement creates a loop Iterating over 
+//iterable objects(including Array, Map, Set, arguments object and so on),
+//invoking a custom iteration hook with statements to be executed for 
+//the value of each distinct property.
+for (variable of object)
+  statement
+
+//must study it more
