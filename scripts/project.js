@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const baseCurrency = "";
     const targetCurrency = "";
 
-    const apiUrl = const apiUrl = `https://data.fixer.io/api/latest?access_key=${accessKey}&base=${baseCurrency}&symbols=${targetCurrency}`;
+    const apiUrl = `https://data.fixer.io/api/latest?access_key=${accessKey}&base=${baseCurrency}&symbols=${targetCurrency}`;
 
     fetch(apiUrl)
         .then(response => response.json())
